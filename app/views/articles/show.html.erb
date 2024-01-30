@@ -1,0 +1,13 @@
+  <div class="cards">
+  <h1><span><%=@article.title%></span></h1>
+
+  <div><%=@article.content%></div><br>
+
+    <%= link_to "Back to List", articles_path %>
+    <%= link_to "New Task", new_article_path %>
+    <%= link_to "Edit Task", edit_article_path %>
+    <%= link_to "Delete",
+      article_path(@article),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
+  </div>
